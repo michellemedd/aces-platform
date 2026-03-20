@@ -1,0 +1,92 @@
+:root {
+  --navy: #003DA6;
+  --navy-mid: #002d7a;
+  --navy-light: #0050cc;
+  --gold: #FFC600;
+  --gold-light: #FFD740;
+  --gold-pale: #FFF8DC;
+  --teal: #00ABC8;
+  --teal-light: #00C5E0;
+  --green: #70D44B;
+  --green-light: #E8F9E2;
+  --orange: #FF6B00;
+  --white: #FFFFFF;
+  --off-white: #F7F8FA;
+  --gray-50: #F0F2F5;
+  --gray-100: #E2E6ED;
+  --gray-200: #C8CDD8;
+  --gray-400: #8B95A8;
+  --gray-600: #4A5568;
+  --gray-800: #1A2332;
+  --red: #C94C4C;
+  --red-light: #FDEAEA;
+  --amber: #C97A1B;
+  --amber-light: #FEF3E2;
+
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 1px 3px rgba(11,31,58,0.08), 0 1px 2px rgba(11,31,58,0.06);
+  --shadow-md: 0 4px 12px rgba(11,31,58,0.1), 0 2px 6px rgba(11,31,58,0.06);
+  --shadow-lg: 0 10px 30px rgba(11,31,58,0.12), 0 4px 12px rgba(11,31,58,0.08);
+  --shadow-gold: 0 4px 20px rgba(201,168,76,0.25);
+
+  --sidebar-width: 240px;
+  --header-height: 60px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 15px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--off-white);
+  color: var(--navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+a { color: inherit; text-decoration: none; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gray-400); }
+
+/* Utility classes */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideIn { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.animate-fade { animation: fadeIn 0.3s ease forwards; }
+.animate-slide { animation: slideIn 0.25s ease forwards; }
